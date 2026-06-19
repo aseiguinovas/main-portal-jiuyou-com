@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aseiguinovas.github.io/main-portal-jiuyou-com/sitemap.xml

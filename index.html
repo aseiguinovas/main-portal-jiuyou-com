@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九游 · 故事与日常的入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf6f0;
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'SimSun', serif;
+            line-height: 1.75;
+            color: #3e3b36;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: rgba(255, 252, 245, 0.8);
+            padding: 2.5rem 2rem 3rem;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        /* 开场短句 —— 像翻开一本手记 */
+        .opening {
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: #5a554c;
+            border-left: 4px solid #c9b99a;
+            padding-left: 1.2rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .opening span {
+            display: block;
+            margin-top: 0.4rem;
+            font-size: 0.95rem;
+            color: #8b8275;
+            font-style: normal;
+        }
+
+        /* 正文段落 */
+        p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        /* 引用块 / 提示框 —— 温和的旁白 */
+        .note-box {
+            background: #f2ede4;
+            border-radius: 20px;
+            padding: 1.4rem 1.8rem;
+            margin: 2rem 0 1.8rem;
+            border: 1px solid #e5ddd2;
+            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.6);
+            color: #4d4840;
+            font-size: 0.98rem;
+        }
+
+        .note-box strong {
+            display: inline-block;
+            margin-bottom: 0.4rem;
+            color: #6b5c48;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* 特点列表 —— 像卡片式的小段落 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 1.5rem;
+            margin: 2.2rem 0 1.8rem;
+        }
+
+        .feature-item {
+            background: #f9f5ee;
+            padding: 0.9rem 1.2rem;
+            border-radius: 18px;
+            border: 1px solid #ece3d6;
+            transition: background 0.2s ease;
+        }
+
+        .feature-item:hover {
+            background: #f0eade;
+        }
+
+        .feature-item h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #655b4f;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-item p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: #6d6459;
+            line-height: 1.5;
+        }
+
+        /* 温和结尾 */
+        .closing {
+            margin-top: 2.4rem;
+            padding-top: 1.6rem;
+            border-top: 1px dashed #d6cdbe;
+            font-size: 1rem;
+            color: #5b544a;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
+        .closing a {
+            color: #7b6e5b;
+            text-decoration: none;
+            border-bottom: 1px solid #c2b5a1;
+            padding-bottom: 1px;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .closing a:hover {
+            color: #4b3f32;
+            border-bottom-color: #7b6e5b;
+        }
+
+        .faq-mini {
+            margin: 1.8rem 0 0.8rem;
+            background: #f8f2ea;
+            padding: 1.2rem 1.6rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+        }
+
+        .faq-mini summary {
+            cursor: default;
+            font-weight: 500;
+            color: #5f5548;
+            margin-bottom: 0.4rem;
+        }
+
+        .faq-mini p {
+            margin-bottom: 0.2rem;
+            color: #655c52;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e4dacd;
+            margin: 1.6rem 0;
+        }
+
+        @media (max-width: 560px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .container {
+                padding: 1.8rem 1.2rem 2.2rem;
+                border-radius: 20px;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            .opening {
+                font-size: 1.1rem;
+                padding-left: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 开场短句 -->
+        <div class="opening">
+            有时候，一个站点就像一个安静的角落。<br>
+            你推开一扇门，里面是熟悉的日常，和一些刚刚好的新鲜。
+            <span>—— 关于九游，一次简单的介绍</span>
+        </div>
+
+        <!-- 承接段落 -->
+        <p>
+            在网络的诸多角落里，总有一些名字会反复出现。<strong>九游</strong> 便是其中一个。它不是一个轰动的传说，更像是一位沉稳的朋友，在数字世界里搭起了一处可以驻足的地方。这个页面所指向的，正是那个名为 <a href="https://main-portal-jiuyou.com" style="color:#7b6e5b; text-decoration: underline; text-underline-offset: 3px;">九游</a> 的站点——一个我们希望用平和语气来讲述的入口。
+        </p>
+
+        <p>
+            它不制造喧嚣，也不追逐短暂的潮流。九游存在的基础，是持续提供清晰、可靠的信息脉络，让每个来访的人都能用自己舒服的节奏去浏览。无论是寻找某个功能，还是随意看看，都无需带着焦虑。站点的设计初衷始终围绕着“可信”二字——内容经过梳理，链接指向明确，没有暗藏的弯绕。
+        </p>
+
+        <!-- 引用块 / 提示框 -->
+        <div class="note-box">
+            <strong>📋 一点说明</strong>
+            九游的页面结构偏向于极简与实用。没有过重的装饰，也没有花哨的动效。如果你喜欢那种打开后一眼就能看到重点的站点，这里大概会合你的心意。内容更新不算频繁，但每一处调整都经过考虑。
+        </div>
+
+        <!-- 特点列表 -->
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>· 安静的导航</h3>
+                <p>分类清晰，没有弹窗干扰，可以顺着自己的兴趣慢慢走。</p>
+            </div>
+            <div class="feature-item">
+                <h3>· 克制的文字</h3>
+                <p>不堆砌形容词，每段介绍都尽量贴近实际用途，避免信息过载。</p>
+            </div>
+            <div class="feature-item">
+                <h3>· 一致的体验</h3>
+                <p>无论是在电脑前还是用手机浏览，版式都保持整洁，重点内容不易遗漏。</p>
+            </div>
+            <div class="feature-item">
+                <h3>· 日常感</h3>
+                <p>没有“重大更新”的紧迫感，更像一个随时可以回来看看的地方。</p>
+            </div>
+        </div>
+
+        <!-- 场景小段落（替代原来的“场景”章节，更自然融入） -->
+        <p>
+            或许你是在某个下午偶然想起，又或者是一直默默收藏。无论是哪种情形，<strong>九游</strong> 都保持着同一个面貌：简单、直接、不打扰。你可以把它当作一个参考点，也可以只是路过时瞥一眼——它始终在那里，不急不缓。
+        </p>
+
+        <!-- FAQ 摘要（折叠风格，但不真的折叠，便于阅读） -->
+        <div class="faq-mini">
+            <summary>❓ 一些你可能想了解的事</summary>
+            <p><strong>这个站点主要提供什么？</strong> 信息索引与基础服务引导，内容围绕日常使用场景搭建。</p>
+            <p><strong>内容是否定期更新？</strong> 根据实际需要做调整，没有固定周期，但会保持有效。</p>
+            <p><strong>链接都安全吗？</strong> 所有指向均经过筛选，符合常规网络使用规范。</p>
+        </div>
+
+        <!-- 温和结尾 -->
+        <div class="closing">
+            <p>如果你愿意，可以随时去 <a href="https://main-portal-jiuyou.com">九游</a> 看看。<br>没有口号，没有催促，只是一扇门安静地开着。</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #8b8275;">—— 希望它对你而言，是一个轻松可信的存在。</p>
+        </div>
+
+        <!-- 隐藏创作种子：仅用于变化，不显示在可见区域 -->
+        <span style="display: none;">ec2a2ec45738df39</span>
+    </div>
+</body>
+</html>
